@@ -288,7 +288,7 @@ Each face minimal even cycle crosses at most one other face minimal even cycle.
 Suppose that a face minimal even cycle $C_1$ crosses 2 other face minimal even cycles $C_2$, $C_3$.
 Let $P_2$ be a subpath of $C_2$ s.t. the internal nodes of $P_2$ are in the interior of $C_1$, and the endpoints of $P_2$ are on $C_1$. Clearly, $P_2$ divides the interior of $C_1$ into two regions, $R_1$ and $R^0_2$. Suppose, w.l.o.g., that $C_3$ intersects the interior of $R^0_2$. Let $P_3$ be a subpath of $C_3$ such that its internal nodes lie in the interior of $R^0_2$, and its endpoints lie on the boundary of $R^0_2$. Hence, $P_3$ subdivides $R^0_2$ into $R_2$ and $R_3$.
 
-Now note that the sum of the lengths of $R_1$, $R_2$, and $R_3$ equals $|C_1| +2(|P_2|+|P_3|)$, an even number by assumption. Hence, one of the $R_i$ must be an even cycle, contradicting the face-minimality of $C_1$. (see figure \ref{fig:crossings}.(i) )
+Now note that the sum of the lengths of $R_1$, $R_2$, and $R_3$ equals $|C_1| +2(|P_2|+|P_3|)$, an even number by assumption. Hence, one of the $R_i$ must be an even cycle, contradicting the face-minimality of $C_1$. (see Figure \ref{fig:crossings}.(i) )
 \end{proof}
 
 An immediate consequence of the above theorem is that our debit graph
@@ -302,14 +302,18 @@ As in \cite{GW98} given the planar embedding of our graph $G$,  we draw (that is
 
 In this drawing the only potential pairs of crossing edges are of the
 form $ (v(M_1),h_1)$, $(v(M_2),h_2)$ where $M_1$ and $M_2$ are two
-crossing even cycles (see Figure \ref{crossings}.(ii)). However, since (by
-Theorem \ref{lcross}) each face minimal even cycle crosses at most one
+crossing even cycles (see Figure \ref{fig:crossings}.(ii)). However, since (by
+Theorem \ref{1cross}) each face minimal even cycle crosses at most one
 other face minimal even cycle. For such a crossing pair, we can {\em
-  detour} (see Figure \ref{crossings}.(ii)) our edges so they don't cross.
+  detour} (see Figure \ref{fig:crossings}.(ii)) our edges so they don't cross.
 \end{proof}
 
+Next we prove our key theorem where we show that, for a minimal hitting set, we may choose a family of witness cycles whose pairwise crossings are very restricted.  
+
 \begin{theorem} \label{laminar witness}
-We may choose a family $\mathcal{A}$ of (even) witness cycles such that if two witness cycles $A_2, A_3 \in \mathcal{A}$ cross $A_1 \in \mathcal{A}$ then there are vertices $u,v \in A_2 \cap A_3$ such that $A_i = Q \cup Q_i$ for i=2,3 where $Q,Q_2,Q_3$  are u,v paths and every other cycle of $\mathcal{A}$  crossed by $A_2 $ or $A_3$  intersects $A_2, A_3$  at $u,v$ only. %   each witness cycle crosses at most one other witness cycle and each  cycle of $ \mathcal{M} $ crosses at most one other cycle of $ \mathcal{A} $.
+We may choose a family $\mathcal{A}$ of (even) witness cycles with the following property.
+For any pairwise distinct $A_1, A_2, A_3 \in \mathcal{A}$ s.t. $A_2$ and $A_3$ cross $A_1$, we must have that (i) $A_2$ and $A_3$ are laminar, and (ii) $A_2$ and $A_3$ either differ in the interior of $A_1$, or they differ on the exterior of $A_1$.
+Formally, there are vertices $u,v \in A_1$, and $u,v$-paths $Q,Q_2$, $Q_3$ whose interior does not intersect $A_1$. We then have that $A_i = Q \cup Q_i$ for $i=2,3$.
 \end{theorem} 
 
 \begin{proof}
